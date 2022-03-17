@@ -120,8 +120,8 @@ class _ToggleState extends State<Toggle> {
               ),
             ],
             animate: true,
-          );
-  // .scale(tapState ? 0.95 : 1, animate: true);
+          )
+          .scale(tapState ? 0.95 : 1, animate: true);
 
   final _styledOuterCircle = ({
     required Widget child,
