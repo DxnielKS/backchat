@@ -7,7 +7,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) => MaterialApp(
         home: Scaffold(
-          body: Toggle(),
+          body: Home(),
         ),
       );
 }
@@ -19,12 +19,12 @@ class Home extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
-        Toggle(),
-        Text('MAP') // Vertical text
+        Text('サインアップ') // Vertical text
             .textColor(Color(0xff44517F))
             .fontSize(28)
             .bold()
             .width(20),
+        Toggle(),
         Styled.widget() // red circle
             .backgroundColor(Color(0xffFF6160))
             .constrained(width: 200, height: 200)
@@ -120,9 +120,8 @@ class _ToggleState extends State<Toggle> {
               ),
             ],
             animate: true,
-          )
-          .scale(tapState ? 0.95 : 1, animate: true);
-
+          );
+  // .scale(tapState ? 0.95 : 1, animate: true);
   final _styledOuterCircle = ({
     required Widget child,
     required bool toggleState,
